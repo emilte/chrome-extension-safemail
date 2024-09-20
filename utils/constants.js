@@ -7,6 +7,7 @@ export const INTERVAL_MS = 4000;
 /**
  * Trusted domains to allow links for.
  * These will be ignored during parsing.
+ * Don't include subdomains.
  */
 export const TRUSTED_DOMAINS = [
 	'google.com',
@@ -22,5 +23,5 @@ export const TRUSTED_DOMAINS = [
 	'scandichotels.com',
 	'flysas.com',
 	'youtube.com',
-	'forms.gle.', // Google Forms.
+	'forms.gle', // Google Forms.
 ];

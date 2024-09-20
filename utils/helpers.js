@@ -3,7 +3,7 @@ import { MARKER } from './constants.js';
 /**
  * Extract url and domain from a tag.
  */
-function getDomain(link) {
+export function getDomain(link) {
 	const url = new URL(link.href);
 	let domain = url.hostname;
 	// Remove subdomains.
@@ -17,12 +17,15 @@ function getDomain(link) {
 /**
  * Create a new span element to display the domain.
  */
-function makeDomainElement(link) {
+export function makeDomainElement(link) {
 	const { url, domain } = getDomain(link);
 
 	const domainSpan = document.createElement('span');
-	domainSpan.textContent = ` (${domain})`;
+	domainSpan.textContent = domain;
 	domainSpan.title = url;
+	domainSpan.style.border = '1px solid red';
+	domainSpan.style.borderRadius = '10px';
+	domainSpan.style.padding = '0 3px';
 	domainSpan.style.color = 'red';
 	domainSpan.style.background = 'black';
 	domainSpan.style.fontSize = 'small';
@@ -33,6 +36,6 @@ function makeDomainElement(link) {
 /**
  *  Mark to skip element in the future.
  */
-function mark(link) {
+export function mark(link) {
 	link.setAttribute(MARKER, true);
 }

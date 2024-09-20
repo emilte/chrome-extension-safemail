@@ -1,4 +1,4 @@
-import { TRUSTED_DOMAINS } from '../utils/constants.js';
+import { INTERVAL_MS, MARKER, TRUSTED_DOMAINS } from '../utils/constants.js';
 import { getDomain, makeDomainElement, mark } from '../utils/helpers.js';
 
 function main() {
@@ -17,7 +17,7 @@ function main() {
 		}
 
 		// Append the new span element behind the link.
-		link.parentNode.insertBefore(makeDomainElement(link), link.nextSibling);
+		link.appendChild(makeDomainElement(link));
 
 		mark(link);
 

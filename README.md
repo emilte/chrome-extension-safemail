@@ -7,6 +7,7 @@ Disable links from untrusted domains.
 1. Clone repo
 2. Go to `chrome://extensions`
 3. Load unpacked -> select this folder
+4. Update `TRUSTED_DOMAINS`
 
 ## Why use this extension?
 
