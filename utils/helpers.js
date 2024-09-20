@@ -39,3 +39,13 @@ export function makeDomainElement(link) {
 export function mark(link) {
 	link.setAttribute(MARKER, true);
 }
+
+/** Attempt to import extended list of trusted domains outside VCS. */
+export async function getSecretTrustedDomains() {
+	try {
+		const secret = await import('./secret.js');
+		return secret.SECRET_TRUSTED_DOMAINS;
+	} catch (error) {
+		return [];
+	}
+}

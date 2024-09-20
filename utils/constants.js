@@ -1,3 +1,5 @@
+import { getSecretTrustedDomains } from './helpers.js';
+
 /** html attribute to mark elements as parsed. */
 export const MARKER = 'data-is-link-parsed';
 
@@ -24,4 +26,4 @@ export const TRUSTED_DOMAINS = [
 	'flysas.com',
 	'youtube.com',
 	'forms.gle', // Google Forms.
-];
+].concat(await getSecretTrustedDomains());
