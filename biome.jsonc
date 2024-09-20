@@ -1,0 +1,22 @@
+{
+	// https://biomejs.dev/reference/configuration/
+	"$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+
+	"files": {
+		"include": [
+			"**/*.js",
+			"**/*.jsx",
+			"**/*.ts",
+			"**/*.tsx",
+			"**/*.css",
+			"**/*.scss"
+		]
+	},
+
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"lineWidth": 120
+		}
+	}
+}

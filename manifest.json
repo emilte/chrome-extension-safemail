@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "CustomStyles",
+	"version": "1.0",
+	"permissions": ["activeTab", "scripting"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*/*"], // Load script on all files.
+			"js": ["content.js"] // Javascript that injects custom styling.
+		}
+	],
+	// Make resources fetchable in js.
+	"web_accessible_resources": [
+		{
+			"matches": ["https://*/*"],
+			"resources": ["scripts/*.js", "utils/*.js"]
+		}
+	]
+}
