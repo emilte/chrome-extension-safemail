@@ -34,8 +34,6 @@ function main() {
 	}
 }
 
-// Run main regularly.
-// setInterval(main, INTERVAL_MS);
-setTimeout(main, 2000);
-window.addEventListener('popstate', () => setTimeout(main, 300));
-window.addEventListener('hashchange', () => setTimeout(main, 300));
+setTimeout(main, 2000); // Some delay to give page time to render on full reload.
+window.addEventListener('popstate', () => setTimeout(main, 300)); // Some delay to wait for render.
+window.addEventListener('hashchange', () => setTimeout(main, 300)); // Some delay to wait for render.

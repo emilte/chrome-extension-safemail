@@ -3,13 +3,11 @@ import { getSecretTrustedDomains } from './helpers.js';
 /** html attribute to mark elements as parsed. */
 export const MARKER = 'data-is-link-parsed';
 
-/** Interval of `main()`. */
-export const INTERVAL_MS = 4000;
-
 /**
- * Trusted domains to allow links for.
+ * List of trusted domains.
+ * You can modify this.
  * These will be ignored during parsing.
- * Don't include subdomains.
+ * (Don't include subdomains).
  */
 export const TRUSTED_DOMAINS = [
 	'google.com',

@@ -11,11 +11,12 @@ Disable links from untrusted domains.
 
 ## Why use this extension?
 
-Ever taken peek at the spam or trash folder, browsing potential emails trapped by an inconcise filter?
+Ever taken a peek at the spam or trash folder, browsing potential emails trapped by an inconcise filter?
 Do you fear accidentally clicking a suspicious or malicious link?
 
 Using this extension, you can feel safer when reading mails.
 It will reduce the chances of clicking links from spoofed emails.
+Any link within an email redirecting to a domain not specified in `TRUSTED_DOMAINS` will be disabled. The untrusted domain will also be highlighted.
 
 The source code is open and only hosted from your local machine.
 Any updates is in your full control, no need to worry about 3rd party extensions and dependency injection (afaik).
