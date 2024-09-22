@@ -2,6 +2,15 @@
 
 Disable links from untrusted domains.
 
+## Example
+
+<details>
+<summary>Example email from Untappd</summary>
+
+![Example](/assets/example.png)
+
+</details>
+
 ## How to:
 
 1. Clone repo
