@@ -1,6 +1,8 @@
 # chrome-extension-safemail
 
 Disable links from untrusted domains.
+<br>
+Currently supports: Gmail
 
 ## Example
 
