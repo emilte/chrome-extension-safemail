@@ -3,6 +3,7 @@
 Disable links from untrusted domains.
 <br>
 Supported clients: Gmail
+<br>
 Supported browsers: Google Chrome, Firefox
 
 > For Chrome, [click here](https://github.com/emilte/chrome-extension-safemail)
