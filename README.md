@@ -16,9 +16,9 @@ Currently supports: Gmail
 ## How to:
 
 1. Clone repo
-2. Go to `chrome://extensions`
-3. Toggle `Developer mode`
-4. Load unpacked -> select this folder
+2. `git checkout firefox`
+3. Paste this in the search bar of Firefox `about:debugging#/runtime/this-firefox`
+4. Load Temporary Add-On... -> select `manifest.json` in this folder
 5. Update `TRUSTED_DOMAINS` or `SECRET_TRUSTED_DOMAINS` in `utils/secret.js`
 
 ## Why use this extension?
