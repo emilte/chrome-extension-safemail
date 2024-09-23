@@ -17,8 +17,9 @@ Currently supports: Gmail
 
 1. Clone repo
 2. Go to `chrome://extensions`
-3. Load unpacked -> select this folder
-4. Update `TRUSTED_DOMAINS` or `SECRET_TRUSTED_DOMAINS` in `utils/secret.js`
+3. Toggle `Developer mode`
+4. Load unpacked -> select this folder
+5. Update `TRUSTED_DOMAINS` or `SECRET_TRUSTED_DOMAINS` in `utils/secret.js`
 
 ## Why use this extension?
 
