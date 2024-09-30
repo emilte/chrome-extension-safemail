@@ -15,6 +15,8 @@ Supported browsers: Google Chrome, Firefox
 
 </details>
 
+<br>
+
 ## How to:
 
 <details>
@@ -51,6 +53,8 @@ Any link within an email redirecting to a domain not specified in `TRUSTED_DOMAI
 
 The source code is open and only hosted from your local machine.
 Any updates is in your full control, no need to worry about 3rd party extensions and dependency injection (afaik).
+
+<br>
 
 ## Customize
 
