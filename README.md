@@ -6,8 +6,6 @@ Supported clients: Gmail
 <br>
 Supported browsers: Google Chrome, Firefox
 
-> For Firefox, [click here](https://github.com/emilte/chrome-extension-safemail/tree/firefox)
-
 ## Example
 
 <details>
@@ -19,11 +17,28 @@ Supported browsers: Google Chrome, Firefox
 
 ## How to:
 
+<details>
+<summary>Google Chrome</summary>
+
 1. Clone repo
-2. Paste this in the search bar of Chrome `chrome://extensions`
+2. Paste this in the search bar of Chrome: `chrome://extensions`
 3. Toggle `Developer mode`
 4. Load unpacked -> select this folder
-5. Update `TRUSTED_DOMAINS` or `SECRET_TRUSTED_DOMAINS` in `utils/secret.js`
+5. Update `TRUSTED_DOMAINS` in `utils/constants.js`
+
+</details>
+
+<details>
+<summary>Firefox</summary>
+
+1. Clone repo
+2. Paste this in the search bar of Firefox: `about:debugging#/runtime/this-firefox`
+3. Load Temporary Add-On... -> select `manifest.json` in this folder
+4. Update `TRUSTED_DOMAINS` in `utils/constants.js`
+
+</details>
+
+<br>
 
 ## Why use this extension?
 
