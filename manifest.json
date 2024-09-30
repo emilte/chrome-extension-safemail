@@ -3,16 +3,20 @@
 	"manifest_version": 3,
 	"version": "1.0",
 	"permissions": ["activeTab", "scripting"],
-	"background": {
-		"service_worker": "background.js"
-	},
 	"content_scripts": [
+		// {
+		// 	"matches": ["https://mail.google.com/*"],
+		// 	"js": ["scripts/mail.google.com.js"]
+		// },
+		// {
+		// 	"matches": [ "https://outlook.live.com/*"],
+		// 	"js": ["scripts/outlook.live.com.js"]
+		// }
 		{
-			"matches": ["https://*/*"], // Load script on all sites.
+			"matches": [ "https://*/*"], // Load script on all sites.
 			"js": ["content.js"] // Javascript that injects custom styling.
 		}
 	],
-	// Make resources fetchable in js.
 	"web_accessible_resources": [
 		{
 			"matches": ["https://*/*"],

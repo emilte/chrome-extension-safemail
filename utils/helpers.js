@@ -1,4 +1,38 @@
-import { MARKER } from './constants.js';
+import { MARKER, TRUSTED_DOMAINS } from './constants.js';
+
+
+export function parseMailBody(el) {
+	if (!el) return;
+
+	/**
+	 * Select all links with href.
+	 * After being parsed, the href will be removed and excluded from future queries.
+	 */
+	const links = el.querySelectorAll('a[href]');
+	
+	// const links = mailBody.querySelectorAll(`a:not([${MARKER}])`);
+
+	for (const link of links) {
+		link.title = link.href; // Show full url on hover.
+
+		// Skip link if domain is allowed.
+		const { domain } = getDomain(link);
+		if (TRUSTED_DOMAINS.includes(domain)) {
+			mark(link);
+			continue;
+		}
+
+		// Append the new span element behind the link.
+		link.appendChild(makeDomainElement(link));
+
+		mark(link);
+
+		// Make link invalid, but keep looking like one.
+		link.style.cursor = 'pointer';
+		link.style.color = 'blue';
+		link.removeAttribute('href');
+	}
+}
 
 /**
  * Extract url and domain from a tag.
@@ -29,6 +63,7 @@ export function makeDomainElement(link) {
 	domainSpan.style.color = 'red';
 	domainSpan.style.background = 'black';
 	domainSpan.style.fontSize = 'small';
+	domainSpan.style.display = 'inline-block';
 
 	return domainSpan;
 }
