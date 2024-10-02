@@ -1,6 +1,5 @@
 import { MARKER, TRUSTED_DOMAINS } from './constants.js';
 
-
 export function parseMailBody(el) {
 	if (!el) return;
 
@@ -9,11 +8,11 @@ export function parseMailBody(el) {
 	 * After being parsed, the href will be removed and excluded from future queries.
 	 */
 	const links = el.querySelectorAll('a[href]');
-	
 	// const links = mailBody.querySelectorAll(`a:not([${MARKER}])`);
 
 	for (const link of links) {
 		link.title = link.href; // Show full url on hover.
+		link.removeAttribute('data-saferedirecturl'); // Looking at you Gmail, sneaky...
 
 		// Skip link if domain is allowed.
 		const { domain } = getDomain(link);
@@ -47,6 +46,20 @@ export function getDomain(link) {
 	}
 	return { url, domain };
 }
+
+/**
+ *
+ */
+// export function makeFakeLink(link) {
+// 	const span = document.createElement('span');
+// 	span.textContent = link.textContent;
+// 	span.title = link.href;
+// 	span.style.color = '#15c';
+// 	span.style.textDecoration = 'underline';
+// 	span.style.cursor = 'pointer';
+
+// 	return span;
+// }
 
 /**
  * Create a new span element to display the domain.
