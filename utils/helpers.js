@@ -17,6 +17,7 @@ export function parseMailBody(el) {
 		// Skip link if domain is allowed.
 		const { domain } = getDomain(link);
 		if (TRUSTED_DOMAINS.includes(domain)) {
+			link.style.color = 'green';
 			mark(link);
 			continue;
 		}
@@ -97,5 +98,14 @@ export async function getSecretTrustedDomains() {
 		return secret.SECRET_TRUSTED_DOMAINS;
 	} catch (error) {
 		return [];
+	}
+}
+
+/**
+ * Set n Timeouts.
+ */
+export function setnTimeOut(f, ...delays) {
+	for (const delay of delays) {
+		setTimeout(f, delay);
 	}
 }
