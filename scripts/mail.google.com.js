@@ -3,10 +3,9 @@ import { mark, parseMailBody, setnTimeOut } from '../utils/helpers.js';
 
 function main() {
 	const mailBody = document.querySelector('[data-message-id]');
-	if (!mailBody) return;
 	parseMailBody(mailBody);
 
-	const header = mailBody.querySelector(`.gs > .gE.iv.gt:not([${MARKER}])`);
+	const header = mailBody?.querySelector(`.gs > .gE.iv.gt:not([${MARKER}])`);
 
 	if (header) {
 		const check = document.createElement('div');
